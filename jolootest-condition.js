@@ -1,8 +1,8 @@
 let drom = true;
-let onoo = 20;
+let onoo = 18;
 
 if (drom == true) {
-  if (onoo > 18) {
+  if (onoo >= 18) {
     console.log("tentssen");
   } else {
     console.log("duremdee tentseh yostoi");
