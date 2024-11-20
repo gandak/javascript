@@ -18,6 +18,73 @@ for (x of ners) {
   console.log(x);
 }
 
+//Bodlogo 1
+let applePrice = 1.5;
+let bananaPrice = 0.8;
+console.log("Total cost is: ", 3 * applePrice + 2 * bananaPrice + "$");
+
+//Bodlogo 2
+let x = -2501;
+if (x % 2 == 0) {
+  if (x > 0) {
+    console.log("x is even and positive");
+  } else {
+    console.log("x is even and negative");
+  }
+} else {
+  if (x < 0) {
+    console.log("x is odd and negative");
+  } else {
+    console.log("x is odd and positive");
+  }
+}
+
+//Bodlogo 3
+
+let username = "admin";
+let password = 12345;
+if (username == "admin" && password == 12345) {
+  console.log("login successful!");
+} else {
+  console.log("Login failed!");
+}
+
+// Bodlogo 4
+
+let age = 12;
+if (age < 13) {
+  console.log("Child");
+} else {
+  if (age >= 13 && age <= 19) {
+    console.log("Teenager");
+  } else {
+    console.log("Adult");
+  }
+}
+
+//Bodlogo 5
+
+let num1 = 12;
+let num2 = 36;
+console.log(num1, "+", num2, "=", num1 + num2);
+console.log(num1, "-", num2, "=", num1 - num2);
+console.log(num1, "*", num2, "=", num1 * num2);
+console.log(num1, "/", num2, "=", num1 / num2);
+
+//Bodlogo 6
+
+let value = false;
+if (value) {
+  console.log("Value is true");
+} else {
+  console.log("value is false");
+}
+
+//Bodlogo 7
+
+let celcius = 10;
+console.log("F=", celcius * 1.4 + 32);
+
 //Bodlogo 8
 
 let year = 2100;
@@ -33,4 +100,23 @@ if (year % 4 == 0) {
   }
 } else {
   console.log("undur jil bishhh");
+}
+
+//Bodlogo 9
+
+let a = 1.3;
+let b = 0.5;
+let c = 1.1;
+if (a > b) {
+  if (b < c) {
+    console.log("Smallest number is b");
+  } else {
+    console.log("Smallest number is c");
+  }
+} else {
+  if (a < c) {
+    console.log("Smallest number is a");
+  } else {
+    console.log("Smallest number is c");
+  }
 }
