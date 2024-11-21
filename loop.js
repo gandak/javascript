@@ -99,8 +99,18 @@ for (let i = num; i > 0; i = Math.floor(i / 10)) {
 }
 console.log(digit);
 
+// .14
+let num = 2431;
+let sum = 0;
+let x = 0;
+while (num != 0) {
+  sum = sum + (num % 10);
+  num = Math.floor(num / 10);
+}
+console.log(sum);
+
 // 22.
-let n = 55;
+let n = 24;
 for (let i = 1; i <= n; i++) {
   if (n % i == 0) {
     console.log(i, "is factor of", n);
@@ -132,8 +142,46 @@ if (p) {
 
 //27
 
-let n = 150;
-let p;
-for (i < 1; i < n; i++) {
-  
+// let n = 150;
+// let p;
+// for (i < 1; i < n; i++) {}
+
+let udur = 4;
+// if(udur == 1){
+//   console.log("Unuudur davaaa garag baina")
+// }
+// if(udur == 2){
+//   console.log("Unuudur myagmar garag baina")
+// }
+// if(udur == 3){
+//   console.log("Unuudur lhagva garag baina")
+// }
+// if(udur == 4){
+//   console.log("Unuudur purev garag baina")
+// }
+// if(udur == 5){
+//   console.log("Unuudur baasan garag baina")
+// }
+// if(udur == 6){
+//   console.log("Unuudur byamba garag baina")
+// }
+// if(udur == 7){
+//   console.log("Unuudur nyam garag baina")
+// }
+
+let weekday = Array(8);
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+weekday[7] = "Sunday";
+
+let input = 5;
+
+for (i = 1; i <= 7; i++) {
+  if (input == i) {
+    console.log("Today is " + weekday[i]);
+  }
 }
