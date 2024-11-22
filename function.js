@@ -153,10 +153,10 @@ console.log("Number of digits in", num, ":", counting(num));
 
 // 11.
 function firstAndLastDigit(n) {
-    return String(n).length;
-  }
-  let num2 = 1213;
-  console.log("Number of digits in", num2, ":", firstAndLastDigit(num2) / );
+  return String(n).length;
+}
+let num2 = 1213;
+console.log("Number of digits in", num2, ":", firstAndLastDigit(num2));
 
 // 22.
 
@@ -199,3 +199,66 @@ let check = isPrime(10);
 console.log(check);
 
 //
+
+// 4 toonii ihiig oloh
+
+const durvunToo = (a, b, c, d) => {
+  if (a >= b && a >= c && a >= d) return a;
+  if (b >= a && b >= c && b >= d) return b;
+  if (c >= a && c >= b && c >= d) return c;
+  return d;
+};
+console.log(durvunToo(10, 7, 10, 8));
+
+// Undur jil oloh function
+
+const year = (year) => {
+  if (year % 4 == 0) {
+    if (year % 400 != 0 && year % 100 == 0) return false;
+    if (year % 400 == 0) return true;
+    if (year % 400 != 0 && year % 100 != 0) return true;
+  }
+  return false;
+};
+console.log(year(2003));
+
+const year2 = (year) => {
+  if (year % 400 == 0) return true;
+  if (year % 100 == 0) return false;
+  if (year % 4 == 0) return true;
+  return false;
+};
+console.log(year2(2400));
+
+// GCD - Hamgiin ih huvaagch
+
+const min = (a, b) => {
+  if (a >= b) return b;
+  return a;
+};
+
+const gcd = (a, b) => {
+  let m = min(a, b);
+  while (true) {
+    //esvel while(1) esvel while(m >= 1))
+    if (a % m === 0 && b % m === 0) return m;
+    m--;
+  }
+};
+console.log(gcd(10, 5));
+
+//Array hamgiin ih utga oloh
+
+const arr = [-4, -5, -1, -40];
+
+const max = (numbers) => {
+  let m = arr[3];
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > m) m = numbers[i];
+  }
+
+  return m;
+};
+
+console.log(max(arr));

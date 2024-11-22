@@ -87,20 +87,20 @@ console.log("F=", celcius * 1.4 + 32);
 
 //Bodlogo 8
 
-// let year = 2100;
-// if (year % 4 == 0) {
-//   if (year % 400 != 0 && year % 100 == 0) {
-//     console.log("undur jil bish");
-//   }
-//   if (year % 400 == 0) {
-//     console.log("undur jil");
-//   }
-//   if (year % 400 != 0 && year % 100 != 0) {
-//     console.log("undur jil4");
-//   }
-// } else {
-//   console.log("undur jil bishhh");
-// }
+let year = 2100;
+if (year % 4 == 0) {
+  if (year % 400 != 0 && year % 100 == 0) {
+    console.log("undur jil bish");
+  }
+  if (year % 400 == 0) {
+    console.log("undur jil");
+  }
+  if (year % 400 != 0 && year % 100 != 0) {
+    console.log("undur jil4");
+  }
+} else {
+  console.log("undur jil bishhh");
+}
 
 let year = 2400;
 if (year % 400 == 0) {
