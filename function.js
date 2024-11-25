@@ -252,7 +252,7 @@ console.log(gcd(10, 5));
 const arr = [-4, -5, -1, -40];
 
 const max = (numbers) => {
-  let m = arr[3];
+  let m = arr[0];
 
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] > m) m = numbers[i];
@@ -262,3 +262,97 @@ const max = (numbers) => {
 };
 
 console.log(max(arr));
+
+function multiples(a, b) {
+  let sum = 0;
+
+  for (let i = 1; i < 10; i++) {
+    if (a * i < 10) sum = sum + a * i;
+    if (b * i < 10) sum = sum + b * i;
+  }
+  return sum;
+}
+
+let niilber = multiples(3, 5);
+console.log(niilber);
+
+function sumOfMultiples(number) {
+  var result = 0;
+
+  for (let i = 0; i < number; i++) {
+    if (i % 5 == 0 || i % 3 == 0) {
+      result += i;
+    }
+  }
+
+  return result;
+}
+console.log(sumOfMultiples(10));
+console.log(sumOfMultiples(1000));
+
+// SUM OF EVEN FIBONACCO NUMBERS
+
+function fibonacci(number) {
+  let x = [];
+  x[0] = 1;
+  x[1] = 2;
+  let sum = x[0] + x[1];
+  for (i = 2; i < number; i++) {
+    x[i] = x[i - 2] + x[i - 1];
+    if (x[i] % 2 == 0) {
+      sum = sum + x[i];
+    }
+  }
+  return sum;
+}
+
+console.log(fibonacci(8));
+
+GATSUUR;
+// let od = "";
+// function gatsuur(number) {
+//   for (let i = 0; i < number; i++) {
+//     od = od + "*";
+//     console.log(od);
+//   }
+// }
+
+// gatsuur(5);
+
+let od = [];
+function gatsuur(number) {
+  for (let i = 0; i < number; i++) {
+    if (number % 2 !== 0) {
+      console.log(od);
+    }
+  }
+}
+
+gatsuur(3);
+
+// 3 toonii Hamgiin iheesee 2 dahi toog oloh
+
+function dundahToo(a, b, c) {
+  if ((a >= b && a <= c) || (a >= c && a <= b)) return a;
+  if ((b >= a && b <= c) || (b >= c && b <= a)) return b;
+  if ((c >= a && c <= b) || (c >= b && c <= a)) return c;
+}
+
+console.log(dundahToo(8, 5, 10));
+
+// Fizz buzz too hevleh
+function fizzFunction(number) {
+  for (i = 1; i <= number; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log(i, "FizzBuzz");
+    } else if (i % 3 == 0) {
+      console.log(i, "Fizz");
+    } else if (i % 5 == 0) {
+      console.log(i, "Buzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+fizzFunction(15);
