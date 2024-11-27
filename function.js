@@ -309,28 +309,84 @@ function fibonacci(number) {
 console.log(fibonacci(8));
 
 GATSUUR;
-// let od = "";
-// function gatsuur(number) {
-//   for (let i = 0; i < number; i++) {
-//     od = od + "*";
-//     console.log(od);
-//   }
-// }
-
-// gatsuur(5);
-
-let od = [];
+let od = "";
 function gatsuur(number) {
   for (let i = 0; i < number; i++) {
-    if (number % 2 !== 0) {
-      console.log(od);
-    }
+    od = od + "*";
+    console.log(od);
   }
 }
 
-gatsuur(3);
+gatsuur(5);
 
-// 3 toonii Hamgiin iheesee 2 dahi toog oloh
+//    *
+//   ***
+//  *****
+// *******
+//*********
+
+//PYRAMID GATSUUR
+
+// function pyramid(num) {
+//   for (let j = 0; j < 3; j++) {
+//     let str = "";
+//     for (let i = 0; i < num - j - 1; i++) {
+//       str = str + " ";
+//     }
+//     for (let i = 0; i < j * 2 + 1; i++) {
+//       str = str + "*";
+//     }
+//     console.log(str);
+//   }
+// }
+
+// pyramid(3);
+
+// RHOMBUS STAR PATTERN
+//     *****
+//    *****
+//   *****
+//  *****
+// *****
+
+function pyramidRhombus(num) {
+  for (let j = 0; j < num; j++) {
+    let str = "";
+    for (let i = 0; i < num - j; i++) {
+      str = str + " ";
+    }
+    for (let i = 0; i < num; i++) {
+      str = str + "*";
+    }
+    console.log(str);
+  }
+}
+
+pyramidRhombus(5);
+
+// HOLLOW RHOMBUS STAR PATTERN
+//     *****
+//    *   *
+//   *   *
+//  *   *
+// *****
+
+function pyramidHollowRhombus(num) {
+  for (let j = 0; j < num; j++) {
+    let str = "";
+    for (let i = 0; i < num - j; i++) {
+      str = str + " ";
+    }
+    for (let i = 0; i < num; i++) {
+      if (j == 0 || j == num - 1 || i == 0 || i == num - 1) str = str + "*";
+    }
+    console.log(str);
+  }
+}
+
+pyramidHollowRhombus(5);
+
+//3 toonii iheesee 2 dahi buyu dundah toog oloh
 
 function dundahToo(a, b, c) {
   if ((a >= b && a <= c) || (a >= c && a <= b)) return a;
