@@ -379,6 +379,7 @@ function pyramidHollowRhombus(num) {
     }
     for (let i = 0; i < num; i++) {
       if (j == 0 || j == num - 1 || i == 0 || i == num - 1) str = str + "*";
+      else str = str + " ";
     }
     console.log(str);
   }
