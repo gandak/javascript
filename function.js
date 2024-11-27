@@ -308,7 +308,7 @@ function fibonacci(number) {
 
 console.log(fibonacci(8));
 
-GATSUUR;
+// GATSUUR
 let od = "";
 function gatsuur(number) {
   for (let i = 0; i < number; i++) {
@@ -364,6 +364,28 @@ function pyramidRhombus(num) {
 
 pyramidRhombus(5);
 
+// MIRRORED RHOMBUS STAR PATTERN
+//*****
+// *****
+//  *****
+//   *****
+//    *****
+
+function pyramidRhombus(num) {
+  for (let j = 0; j < num; j++) {
+    let str = "";
+    for (let i = 0; i < j; i++) {
+      str = str + " ";
+    }
+    for (let i = 0; i < num; i++) {
+      str = str + "*";
+    }
+    console.log(str);
+  }
+}
+
+pyramidRhombus(5);
+
 // HOLLOW RHOMBUS STAR PATTERN
 //     *****
 //    *   *
@@ -386,6 +408,29 @@ function pyramidHollowRhombus(num) {
 }
 
 pyramidHollowRhombus(5);
+
+//Hollow Right Triangle Star Pattern
+// *
+// **
+// * *
+// *  *
+// *****
+
+function hollowRightTriangle(num) {
+  for (let j = 1; j <= num; j++) {
+    let str = "";
+    for (let i = 1; i <= j; i++) {
+      if (i == 1 || i == j || j == num) {
+        str = str + "*";
+      } else {
+        str = str + " ";
+      }
+    }
+    console.log(str);
+  }
+}
+
+hollowRightTriangle(5);
 
 //3 toonii iheesee 2 dahi buyu dundah toog oloh
 
