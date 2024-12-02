@@ -458,3 +458,23 @@ function fizzFunction(number) {
 }
 
 fizzFunction(15);
+
+
+// Function-d dunction ogoh
+
+const chatProgram =(a,b, c) =>{
+  b();
+  console.log(a);
+}
+
+let askQuestion = chatProgram (null, () => {console.log("how are you?")});
+//                            (a, b) utga ogch bna, b -d function 
+
+const chatProgram2 =(a,b, c) =>{
+  a();
+  b();
+  c();
+}
+
+chatProgram2 (() => {console.log("Hi?")}, () => {console.log("How are you?")}, () => {console.log("Have a good day!")});
+
