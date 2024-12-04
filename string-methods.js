@@ -63,12 +63,12 @@
 //    Ehendeh hamgiin urt ugiin olj hevleh
 //    OUTPUT: "Fullstack"
 
-// let input = "Hello world! I am Fullstack Developer";
-// let arr = input.split(" ");
-// arr.sort((a, b) => {
-//   return b.length - a.length;
-// });
-// console.log(arr[0]);
+let input = "Hello world! I am Fullstack Developer";
+let arr = input.split(" ");
+arr.sort((a, b) => {
+  return b.length - a.length;
+});
+console.log(arr[0]);
 
 // 2. INPUT: "Hello world! I am Fullstack Developer"
 //    Hamgiin ehnii hamgiin suuliing ug hoyriin bairiig solij hevleh

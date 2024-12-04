@@ -1,3 +1,4 @@
+const util = require("util");
 // map, sort, filter methods
 
 // let students = [
@@ -273,7 +274,7 @@ const employees = [
 //   return arr.department == "Engineering";
 // });
 
-// console.log(engineers);
+// // console.log(engineers);
 
 // let totalSalary = engineers.reduce((sum, engineer) => sum + engineer.salary, 0);
 // console.log("2. Engineeruudiin niit tsalin: ", totalSalary);
@@ -304,21 +305,36 @@ const employees = [
 // Sort + Nested Filters: Top Performer in Engineering
 // Identify the top performer in the Engineering department based on their total performance scores.
 
-let filteredEngineers = employees.filter((arr) => {
-  return arr.department == "Engineering";
-});
+// let filteredEngineers = employees.filter((arr) => {
+//   return arr.department == "Engineering";
+// });
 
-let mappedEngineers = filteredEngineers.map((employee) => {
-  let sum = 0;
-  employee.performance.map((arr) => {
-    sum = sum + arr;
-  });
-  employee.performance = sum;
-  return { name: employee.name, performance: employee.performance };
-});
-// console.log(mappedEngineers);
+// let mappedEngineers = filteredEngineers.map((employee) => {
+//   let sum = 0;
+//   employee.performance.map((arr) => {
+//     sum = sum + arr;
+//   });
+//   employee.performance = sum;
+//   return { name: employee.name, performance: employee.performance };
+// });
+// // console.log(mappedEngineers);
 
-let bestPerformer = mappedEngineers.sort((a, b) => {
-  return b.performance - a.performance;
-});
-console.log("4. Shildeg performance-tai ajiltan: ", bestPerformer[0]);
+// let bestPerformer = mappedEngineers.sort((a, b) => {
+//   return b.performance - a.performance;
+// });
+// console.log("4. Shildeg performance-tai ajiltan: ", bestPerformer[0]);
+
+// Custom Sorting: Projects by Hours
+// For each employee, sort their projects array
+// by hoursSpent in descending order.
+
+// let sortedArray = [];
+// employees.map((arr) => {
+//   sortedArray = arr.projects.sort((a, b) => {
+//     return b.hoursSpent - a.hoursSpent;
+//   });
+//   console.log(sortedArray);
+//   arr.projects = sortedArray;
+// });
+
+// console.log(util.inspect(employees, true, null, false));
