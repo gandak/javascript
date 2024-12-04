@@ -45,33 +45,53 @@
 
 // TASK
 
-const names = [
-  { name: "Alice", age: 20 },
-  { name: "Bob", age: 25 },
-  { name: "John", age: 30 },
-  { name: "Jane", age: 35 },
-  { name: "Joe", age: 40 },
-];
-const names2 = [
-  { name: "Andy", age: 20 },
-  { name: "Bilguun", age: 25 },
-  { name: "Jargalmaa", age: 30 },
-  { name: "Anguuch", age: 35 },
-  { name: "Mah", age: 40 },
-  { name: "Chinguun", age: 45 },
-];
+// const names = [
+//   { name: "Alice", age: 20 },
+//   { name: "Bob", age: 25 },
+//   { name: "John", age: 30 },
+//   { name: "Jane", age: 35 },
+//   { name: "Joe", age: 40 },
+// ];
+// const names2 = [
+//   { name: "Andy", age: 20 },
+//   { name: "Bilguun", age: 25 },
+//   { name: "Jargalmaa", age: 30 },
+//   { name: "Anguuch", age: 35 },
+//   { name: "Mah", age: 40 },
+//   { name: "Chinguun", age: 45 },
+// ];
 
-// 1. FIND FIRST PERSON THAT NAME STARTS WITH 'C'
+// // 1. FIND FIRST PERSON THAT NAME STARTS WITH 'C'
 
-allNames = [...names, ...names2];
+// allNames = [...names, ...names2];
 
-let nameWithC = allNames.find((arr) => {
-  if (arr.name[0] == "C") return arr;
-});
-console.log(nameWithC);
+// let nameWithC = allNames.find((arr) => {
+//   if (arr.name[0] == "C") return arr;
+// });
+// console.log(nameWithC);
 
 // 2. FIND FIRST PERSON THAT OLDER THAN 25
-let olderPersons = allNames.find((arr) => {
-  if (arr.age >= 25) return arr;
+// let olderPersons = allNames.find((arr) => {
+//   if (arr.age >= 25) return arr;
+// });
+// console.log(olderPersons);
+
+// Ene stringees nereern haihad zuvhun dugaarn garj ireh
+
+const contactsString =
+  "Alice:99123456, Bob:99678901, Charlie:99543210, David:99321098, Eve:99234567, Frank:99456789, Grace:99789012, Hannah:99876543, Ivy:99987654, Jack:99111234";
+let contactArray = contactsString.split(", ");
+
+let splittedArray = [];
+
+let search = "Alice";
+let phoneNum = "";
+
+contactArray.map((arr) => {
+  splittedArray = arr.split(":");
+  if (splittedArray[0] == search) {
+    phoneNum = splittedArray[1];
+  }
 });
-console.log(olderPersons);
+
+console.log(search + "-iin utasnii dugaar:", phoneNum);

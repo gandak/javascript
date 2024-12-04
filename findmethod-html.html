@@ -7,19 +7,33 @@
   </head>
   <body></body>
   <script>
-    const inventory = [
-      { name: "apples", quantity: 2 },
-      { name: "bananas", quantity: 0 },
-      { name: "cherries", quantity: 5 },
-    ];
-    let search = prompt("Ta haih ymaa oruulnuu");
-    let foundItem = inventory.find((fruit) => {
-      return fruit.name === search;
-    });
-    if (foundItem == undefined) {
-      alert("Tanii haisan zuil oldsongui");
-    } else alert(foundItem.quantity);
+    // const inventory = [
+    //   { name: "apples", quantity: 2 },
+    //   { name: "bananas", quantity: 0 },
+    //   { name: "cherries", quantity: 5 },
+    // ];
+    // let search = prompt("Ta haih ymaa oruulnuu");
+    // let foundItem = inventory.find((fruit) => {
+    //   return fruit.name === search;
+    // });
+    // if (foundItem == undefined) {
+    //   alert("Tanii haisan zuil oldsongui");
+    // } else alert(foundItem.quantity);
 
     // console.log("Tanii haisan ym", foundItem);
+
+    const contactsString =
+      "Alice:99123456, Bob:99678901, Charlie:99543210, David:99321098, Eve:99234567, Frank:99456789, Grace:99789012, Hannah:99876543, Ivy:99987654, Jack:99111234";
+    let contactArray = contactsString.split(", ");
+
+    let splittedArray = [];
+
+    let search = prompt("Ta haih neree oruulna uu");
+    contactArray.map((arr) => {
+      splittedArray = arr.split(":");
+      if (splittedArray[0] == search) {
+        alert(splittedArray[1]);
+      }
+    });
   </script>
 </html>
