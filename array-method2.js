@@ -243,27 +243,27 @@ const employees = [
 //   Filter + Map: Average Performance
 // Write a function to get an array of names for employees whose average performance score is greater than or equal to 4.5.
 
-// let findBestEmployees = (employees) => {
-//   employees.map((employee) => {
-//     let sum = 0;
-//     employee.performance.map((arr) => {
-//       sum = sum + arr;
-//     });
-//     employee.performance = sum / employee.performance.length;
-//   });
+let findBestEmployees = (employees) => {
+  employees.map((employee) => {
+    let sum = 0;
+    employee.performance.map((arr) => {
+      sum = sum + arr;
+    });
+    employee.performance = sum / employee.performance.length;
+  });
 
-// console.log(employees);
+  // console.log(employees);
 
-//   let bestEmployees = employees.filter((arr) => {
-//     return arr.performance >= 4.5;
-//   });
+  let bestEmployees = employees.filter((arr) => {
+    return arr.performance >= 4.5;
+  });
 
-//   let BestEmployeesNames = bestEmployees.map((arr) => arr.name);
+  let BestEmployeesNames = bestEmployees.map((arr) => arr.name);
 
-//   console.log("1. Shildeg ajilchid: ", BestEmployeesNames);
-// };
+  console.log("1. Shildeg ajilchid: ", BestEmployeesNames);
+};
 
-// findBestEmployees(employees);
+findBestEmployees(employees);
 
 // -------------------------------------------------------------------------------------------------------------------
 
@@ -328,13 +328,13 @@ const employees = [
 // For each employee, sort their projects array
 // by hoursSpent in descending order.
 
-// let sortedArray = [];
-// employees.map((arr) => {
-//   sortedArray = arr.projects.sort((a, b) => {
-//     return b.hoursSpent - a.hoursSpent;
-//   });
-//   console.log(sortedArray);
-//   arr.projects = sortedArray;
-// });
+let sortedArray = [];
+employees.map((arr) => {
+  sortedArray = arr.projects.sort((a, b) => {
+    return b.hoursSpent - a.hoursSpent;
+  });
+  console.log(sortedArray);
+  arr.projects = sortedArray;
+});
 
-// console.log(util.inspect(employees, true, null, false));
+console.log(util.inspect(employees, true, null, false));

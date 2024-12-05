@@ -26,11 +26,12 @@
       "Alice:99123456, Bob:99678901, Charlie:99543210, David:99321098, Eve:99234567, Frank:99456789, Grace:99789012, Hannah:99876543, Ivy:99987654, Jack:99111234";
     let contactArray = contactsString.split(", ");
 
-    let splittedArray = [];
+    // let splittedArray = [];
 
     let search = prompt("Ta haih neree oruulna uu");
+
     contactArray.map((arr) => {
-      splittedArray = arr.split(":");
+      let splittedArray = arr.split(":");
       if (splittedArray[0] == search) {
         alert(splittedArray[1]);
       }
