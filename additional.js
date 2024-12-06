@@ -200,10 +200,13 @@ const employees = [
 // console.log(getEmployeesSalaryIsHigh(employees));
 
 // get employees that they have completed both projects
-const getEmployeesSalaryIsHigh = (employees) =>
-  employees.filter((employee) =>
-    employee.projects.filter((arr) => arr.status !== "in-progress")
+const getEmployeesDoneProjects = (employees) =>
+  employees.filter(
+    (employee) =>
+      employee.projects.filter((project) => project.status === "completed")
+        .length == 2 // filter method ni tsaanaa zovhon completed project-g hadgalj bga ch, console log deer hevlehdee 2uulang ni haruulj bga
+    // in-progress project-n array-g [] hooson array butsaaj bga, return deer hooson array ni TRUE utga butsaadag bolohoor console log deer 2uulang ni haruulj baina
   );
 console.log(
-  util.inspect(getEmployeesSalaryIsHigh(employees), true, null, false)
+  util.inspect(getEmployeesDoneProjects(employees), true, null, false)
 );

@@ -1,0 +1,47 @@
+.body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#parent {
+  max-width: 1200px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.article-body {
+  width: 280px;
+  /* background-color: beige; */
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+.image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.image.img {
+  width: 100%;
+  height: 100%;
+}
+
+.article-body .price {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.article-body .title {
+  font-size: 16px;
+}
+
+.article-body .location {
+  color: grey;
+  font-size: 14px;
+  font-weight: 100;
+}
