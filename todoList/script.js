@@ -72,7 +72,7 @@ const listData = [
 ];
 
 function lists(title, date, state) {
-  const listsInside = document.querySelector("#lists-container");
+  const listsInside = document.querySelector("#todo");
 
   const listItem = document.createElement("div");
   listItem.setAttribute("class", "listItem");
