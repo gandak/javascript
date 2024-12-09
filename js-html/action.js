@@ -70,4 +70,4 @@ newArticles.map((arr) => {
   articles = articles + article;
 });
 
-document.getElementById("parent").innerHTML = articles;
+document.getElementById("articles").innerHTML = articles;
