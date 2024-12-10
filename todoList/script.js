@@ -26,7 +26,7 @@
       </div> */
 }
 
-const containerItems = [
+const containerTitles = [
   {
     title: "To do",
     count: 5,
@@ -55,53 +55,36 @@ const containerItems = [
 
 const listData = [
   {
-    title: "Geree tseverleh",
-    date: "2024-12-09",
+    title: "Гэрээ цэвэрлэх",
+    date: "XII / 08",
+    state: "in-progress",
+  },
+  {
+    title: "Хувцасаа бэлдэх",
+    date: "XII / 08",
     state: "todo",
   },
   {
-    title: "Huvtsasaa beldeh",
-    date: "2024-12-09",
+    title: "Шинэ жилд явах",
+    date: "XII / 09",
     state: "todo",
   },
   {
-    title: "Shine jild yavah",
-    date: "2024-12-09",
-    state: "todo",
+    title: "Утсаа цэнэглэх",
+    date: "XII / 09",
+    state: "blocked",
+  },
+  {
+    title: "Ус уух",
+    date: "XII / 09",
+    state: "in-progress",
+  },
+  {
+    title: "Даалгавар хийх",
+    date: "XII / 09",
+    state: "in-progress",
   },
 ];
-
-function lists(title, date, state) {
-  const listsInside = document.querySelector("#todo");
-
-  const listItem = document.createElement("div");
-  listItem.setAttribute("class", "listItem");
-
-  const listItemP = document.createElement("p");
-  listItemP.innerText = title;
-  const dateItemP = document.createElement("p");
-  dateItemP.innerText = date;
-
-  const select = document.createElement("select");
-  const option1 = document.createElement("option");
-  option1.innerText = state;
-
-  const option2 = document.createElement("option");
-  option2.innerText = "in-Progress";
-
-  const img = document.createElement("img");
-  img.setAttribute("src", "./trash.svg");
-
-  listsInside.appendChild(listItem);
-
-  listItem.appendChild(listItemP);
-  listItem.appendChild(dateItemP);
-  listItem.appendChild(select);
-  listItem.appendChild(img);
-
-  select.appendChild(option1);
-  select.appendChild(option2);
-}
 
 function addColumn(title, color, count, id) {
   const taskContainer2 = document.querySelector("#taskContainer");
@@ -135,15 +118,49 @@ function addColumn(title, color, count, id) {
   taskContainer2.appendChild(todoList);
 }
 
-// containerItems.map((item) => {
-//   addTaskList(item.title, item.color, item.count, item.id);
-// });
+function lists(title, date, state) {
+  const listsInside = document.querySelector(`#${state}`);
 
-addColumn(
-  containerItems[0].title,
-  containerItems[0].color,
-  containerItems[0].count,
-  containerItems[0].id
-);
+  const listItem = document.createElement("div");
+  listItem.setAttribute("class", "listItem");
 
-lists(listData.title, listData.date, listData.state);
+  const listItemP = document.createElement("p");
+  listItemP.innerText = title;
+
+  const dateItemP = document.createElement("p");
+  dateItemP.innerText = date;
+
+  const select = document.createElement("select");
+
+  let option = document.createElement("option");
+  option.innerText = state;
+  select.appendChild(option);
+
+  containerTitles.map((arr) => {
+    if (arr.id != state) {
+      option = document.createElement("option");
+      option.innerText = arr.id;
+      select.appendChild(option);
+    }
+  });
+
+  const img = document.createElement("img");
+  img.setAttribute("src", "./trash.svg");
+
+  listsInside.appendChild(listItem);
+
+  listItem.appendChild(listItemP);
+  listItem.appendChild(dateItemP);
+  listItem.appendChild(select);
+  listItem.appendChild(img);
+}
+
+containerTitles.map((item) => {
+  addColumn(item.title, item.color, item.count, item.id);
+});
+
+listData.map((item) => {
+  lists(item.title, item.date, item.state);
+  // if (item.state == "in-progress")
+  //   return listsProgress(item.title, item.date, item.state);
+});
