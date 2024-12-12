@@ -22,7 +22,7 @@
             </select>
             <img src="./trash.svg" alt="" />
           </div>
-        </div>
+        </div>a
       </div> */
 }
 
@@ -163,4 +163,22 @@ listData.map((item) => {
   lists(item.title, item.date, item.state);
   // if (item.state == "in-progress")
   //   return listsProgress(item.title, item.date, item.state);
+});
+
+let number = document.getElementById("number");
+const minusButton = document.getElementById("minus");
+const plusButton = document.getElementById("plus");
+
+minusButton.addEventListener("click", () => {
+  let x = Number(number.innerText);
+  x = x - 1;
+  console.log(x);
+  number.innerText = x.toString();
+});
+
+plusButton.addEventListener("click", () => {
+  let x = Number(number.innerText);
+  x = x + 1;
+  console.log(x);
+  number.innerText = x.toString();
 });

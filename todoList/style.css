@@ -73,3 +73,7 @@ body {
 .listItem img:hover {
   cursor: pointer;
 }
+
+.deleteButton {
+  background-color: red;
+}

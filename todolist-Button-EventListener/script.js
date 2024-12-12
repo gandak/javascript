@@ -14,6 +14,13 @@ button.addEventListener("click", () => {
   }
 });
 
+const removeIconbutton = document.getElementById("removeIcon-1");
+
+removeIconbutton.addEventListener("click", () => {
+  // removeTodo(remove);
+  console.log("REMOVED!!!!");
+});
+
 function renderTodos() {
   const tasklist = document.getElementById("tasklist");
   tasklist.innerHTML = null;
@@ -47,14 +54,11 @@ function errorRemove() {
   p.innerText = null;
 }
 
-function removeTodo() {
-  const removeIconbutton = getElementById(`removeIcon-${index}`);
+// function removeTodo() {
+//   todos.map((todo, index) => {
 
-  removeIconbutton.addEventListener("click", () => {
-    const removeIconButton = document.getElementsById(`removeIcon-${index}`);
-    const deleteDiv = document.getElementById(`todoContainer-${index}`);
-    deleteDiv = null;
-  });
-}
+//     return removeIconbutton;
+//   });
+// }
 
 console.log(todos);
