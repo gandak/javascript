@@ -9,8 +9,12 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
     "tonal-roman-numeral": "^2.2.2",
     "typescript-roman-numbers-converter": "^1.2.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0"
   }
 }
